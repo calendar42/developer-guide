@@ -10,15 +10,19 @@ At C42 we work with prepared installations for our team that contain different p
 * **UX package**: Installed team members people design User experiences
 * **Bizdev package**: Installed for team members that are developing business
 
+## Todo's in this document
 
+* Extend list
+* Define minimum versions of software
+* Add all the links to the different software
 
 ## General Package
 
 #### Mac & Ubuntu
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
-| Chrome 					| Browser
+| Name 						|  Short Description 		
+| --------					| --------					
+| [Chrome](https://www.google.nl/chrome/browser/desktop/) | Browser
 | Flux 						| Automatic screen dimmer
 | LastPass Chrome extension | Password manager
 | lastpass-cli 				| Password manager command line
@@ -29,8 +33,8 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 
 #### Mac only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | Clipmenu 0.4				| Clipboard manager
 | BetterTouchTools 			| Workspace shortcuts for keyboard and mouse
 | Adium 					| Chat messaging (XMPP)
@@ -38,8 +42,8 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 
 #### Ubuntu only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | Pidgin 					| Chat messaging (XMPP)
 
 
@@ -48,8 +52,8 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 
 #### Mac & Ubuntu
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | PyCharm 					| Python IDE
 | IntelliJ 					| Java IDE
 | command-line: git 		|
@@ -66,30 +70,30 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 
 #### Mac only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | xCode & development utils | Needed for a lot of low-level development stuff
 | command-line: brew 		| Package manager
 | iTerm 					| Improved terminal
 
 #### Ubuntu only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | Meld 						| Diffing tool
 
 ## UX Package
 
 #### Mac only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | Adobe Creative Cloud 		| The hardcore design tools
 
 ## UX Package
 
 #### Mac only
 
-| Name 						|  Short Description 		| Website
-| --------					| --------					| --------
+| Name 						|  Short Description 		
+| --------					| --------					
 | Microsoft Office 			| The tools for the office
