@@ -23,11 +23,11 @@ At C42 we work with prepared installations for our team that contain different p
 | Name 						|  Short Description 		
 | --------					| --------					
 | [Chrome](https://www.google.nl/chrome/browser/desktop/) | Browser
-| Flux 						| Automatic screen dimmer
-| LastPass Chrome extension | Password manager
-| lastpass-cli 				| Password manager command line
-| Sublime Text 3^			| Text editor
-| Skype 					| VOIP
+| [Flux](https://justgetflux.com/)| Automatic screen dimmer
+| [LastPass Chrome extension](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd) | Password manager
+| [lastpass-client](https://lastpass.com/misc_download2.php) 	| Password manager command line
+| [Sublime Text 3^](http://www.sublimetext.com/2)	| Text editor
+| [Skype](http://www.skype.com/en/download-skype/skype-for-computer/)	| VOIP
 
 _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. In the end the computer is just a digital type writer, everybody needs a good text editor. Others are also allowed of course ;)_
 
