@@ -81,6 +81,7 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | Name 						|  Short Description 		
 | --------					| --------					
 | Meld 						| Diffing tool
+| Slack client 						| Slack communications
 
 ## UX Package
 
