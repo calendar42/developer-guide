@@ -82,6 +82,7 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | --------					| --------					
 | Meld 						| Diffing tool
 | Slack client 						| Slack communications
+| Ubuntu version | LTS always. All softwares are guaranteed to work. Currently 14.04.2 LTS.  
 
 ## UX Package
 
