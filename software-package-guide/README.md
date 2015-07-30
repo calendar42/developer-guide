@@ -142,4 +142,8 @@ sudo pip install virtualenvwrapper
 ssh-keygen -t rsa -b 4096 -C "jasper@calendar42.com"
 # copy public key for use in github account
 pbcopy < ~/.ssh/id_rsa.pub
+# have sublime in the terminal (Requires Sublime 3 to be installed)
+mkdir ~/bin
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+sudo echo "~/bin" >> /etc/paths
 ```
