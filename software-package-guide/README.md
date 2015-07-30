@@ -168,9 +168,9 @@ function forwardPort42(){
     ssh -L $1:localhost:$1 $2.c42.it
 }
 
-#Add sudo in front of the previous written command. Doesn't work with commands with lots of arguments.
-alias fuck='sudo $(history -p \!\!)'
-
+function forwardPort(){
+	ssh -L $1:localhost:$1 $2
+}
 
 ##### Fixes, comment in as necessary
 
