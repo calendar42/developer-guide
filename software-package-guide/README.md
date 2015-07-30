@@ -147,3 +147,59 @@ mkdir ~/bin
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 sudo echo "~/bin" >> /etc/paths
 ```
+
+## .bash_profile example
+
+```
+##### General commands
+
+# Navigation and listing util alias
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ~='cd ~'
+
+#Add sudo in front of the previous written command. Doesn't work with commands with lots of arguments.
+alias fuck='sudo $(history -p \!\!)'
+
+#forward a port, example of usage: forwardPort42 6543 alpha
+function forwardPort42(){
+    ssh -L $1:localhost:$1 $2.c42.it
+}
+
+#Add sudo in front of the previous written command. Doesn't work with commands with lots of arguments.
+alias fuck='sudo $(history -p \!\!)'
+
+
+##### Fixes, comment in as necessary
+
+# For making nodejs and bootstrap work on Mac (https://github.com/react-bootstrap/react-bootstrap/issues/538)
+# ulimit -n 2560
+
+# For python virtualenv
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+# WORKON_HOME=/Users/$USER/virtualenvs
+
+
+##### Logging in commands
+
+alias alpha="ssh $USER@alpha.calendar42.com -4"
+alias beta="ssh $USER@beta.calendar42.com -4"
+alias prod="ssh $USER@calendar42.com -4"
+alias production="prod"
+
+
+##### Version control commands
+
+# hg and file management alias
+alias hgPullAndUp='hg pull -u'
+alias rmorig='find . -name "*.orig" -delete'
+alias removepyc='find . -name "*.pyc" -delete'
+
+
+##### Mac specific commands
+
+alias clear_dns_cache='dscacheutil -flushcache'
+```
