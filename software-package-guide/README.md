@@ -180,7 +180,8 @@ function forwardPort(){
 # For python virtualenv
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
-# WORKON_HOME=/Users/$USER/virtualenvs
+# WORKON_HOME=/Users/$USER/Developer/virtualenvs
+# source /usr/local/bin/virtualenvwrapper.sh # the answer to  "which virtualenvwrapper.sh"
 
 
 ##### Logging in commands
