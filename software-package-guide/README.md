@@ -132,6 +132,15 @@ brew install hg
 brew install lastpass-cli
 # install ssh-copy-id
 brew install ssh-copy-id
+brew install libtiff libjpeg webp little-cms2
+# install postgres and postgis
+xcode-select --install
+brew install postgresql
+brew install postgis
+brew install gdal
+brew install libgeoip
+# install libyaml
+brew install libyaml
 # install pip
 sudo easy_install pip
 # install virtualenv
@@ -203,4 +212,63 @@ alias removepyc='find . -name "*.pyc" -delete'
 ##### Mac specific commands
 
 alias clear_dns_cache='dscacheutil -flushcache'
+```
+
+## Global hg config
+
+**~/.hgrc**
+
+```
+[ui]
+ignore = ~/.hgignore
+username = FirstName LastName name@calendar42.com
+```
+
+**~/.hgignore**
+
+```
+syntax: glob
+
+.gitignore
+node_modules
+.c9revisions
+.DS_Store
+Thumbs.db
+
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+.idea
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+include
+man
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
 ```
