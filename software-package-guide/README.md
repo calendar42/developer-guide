@@ -48,7 +48,9 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | Name 						|  Short Description 		
 | --------					| --------					
 | Pidgin 					| Chat messaging (XMPP)
-
+| Thunderbird					| Mail program
+| Terminator 					| Terminal
+| Diodon 					| Clipboard manager
 
 
 ## Developer Package
@@ -60,6 +62,7 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | Top Programming Fonts | to look at something nice all day | [latest](https://github.com/hbin/top-programming-fonts)
 | PyCharm 					| Python IDE | latest
 | IntelliJ 					| Java IDE | latest
+| Android Studio 				| Android IDE | latest
 | command-line: git 		| | latest
 | command-line: hg 			| | latest
 | command-line: lastpass-cli| | latest
@@ -71,6 +74,25 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | command-line: virtualenv 	| | latest
 | command-line: virtualenvwrapper | | latest
 | command-line: vim 		| | latest
+| command-line: npm 		| | latest
+| command-line: grunt 		| | latest
+| command-line: ruby 		| | latest
+| command-line: ADT 		| | latest
+| command-line: Cordova 	| | latest
+| submlime-extension: SublimeLinter | | latest
+| apache server  		| Up and running installation | latest
+| MySQL server 			| | latest
+| postgresQL with postGIS   	| | 9.4
+| Chromium 			| Development version of Chrome |
+| Poedit			| i18n editor | latest
+| Tortoise HG 			| Visual HG manager | latest
+| Chrome Extension Postman | |
+| Chrome Extension DevDocs | |
+| Chrome Extension JSON editor | |
+| Chrome Extension Less editor | |
+| Chrome Extension RegExp Tester App | |
+| Chrome Extension JSFiddle | |
+| Chrome Extension Python Fiddle | |
 
 #### Mac only
 
@@ -88,8 +110,10 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | Name 						|  Short Description 		
 | --------					| --------					
 | Meld 						| Diffing tool
-| Slack client 						| Slack communications
-| Ubuntu version | LTS always. All softwares are guaranteed to work. Currently 14.04.2 LTS.  
+| Slack client 					| Slack communications
+| gitg						| Visual GIT Manager
+| Ubuntu version | LTS always. All softwares are guaranteed to work. Currently 14.04.2 LTS. 
+| Compiz settings manager | 
 
 ## UX Package
 
