@@ -183,6 +183,8 @@ sudo echo "~/bin" >> /etc/paths
 
 ## .bash_profile example
 
+Can also be put in `/etc/profile` to be system wide instead of per user
+
 ```
 ##### General commands
 
