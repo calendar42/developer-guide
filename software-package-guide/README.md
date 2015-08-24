@@ -186,6 +186,17 @@ sudo echo "~/bin" >> /etc/paths
 Can also be put in `/etc/profile` to be system wide instead of per user
 
 ```
+# System-wide .profile for sh(1)
+
+if [ -x /usr/libexec/path_helper ]; then
+	eval `/usr/libexec/path_helper -s`
+fi
+
+if [ "${BASH-no}" != "no" ]; then
+	[ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+
 ##### General commands
 
 # Navigation and listing util alias
@@ -203,9 +214,9 @@ function forwardPort42(){
     ssh -L $1:localhost:$1 $2.c42.it
 }
 
-function forwardPort(){
-	ssh -L $1:localhost:$1 $2
-}
+#Add sudo in front of the previous written command. Doesn't work with commands with lots of arguments.
+alias fuck='sudo $(history -p \!\!)'
+
 
 ##### Fixes, comment in as necessary
 
@@ -213,11 +224,10 @@ function forwardPort(){
 # ulimit -n 2560
 
 # For python virtualenv
-# export LC_ALL=en_US.UTF-8
-# export LANG=en_US.UTF-8
-# WORKON_HOME=/Users/$USER/Developer/virtualenvs
-# source /usr/local/bin/virtualenvwrapper.sh # the answer to  "which virtualenvwrapper.sh"
-
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+WORKON_HOME=/Users/$USER/Developer/virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh # the answer to  which virtualenvwrapper.
 
 ##### Logging in commands
 
@@ -225,7 +235,8 @@ alias alpha="ssh $USER@alpha.calendar42.com -4"
 alias beta="ssh $USER@beta.calendar42.com -4"
 alias prod="ssh $USER@calendar42.com -4"
 alias production="prod"
-
+alias port_alpha="ssh -L 6543:localhost:6543 alpha.calendar42.com"
+alias port_beta="ssh -L 6543:localhost:6543 beta.calendar42.com"
 
 ##### Version control commands
 
@@ -238,6 +249,46 @@ alias removepyc='find . -name "*.pyc" -delete'
 ##### Mac specific commands
 
 alias clear_dns_cache='dscacheutil -flushcache'
+
+
+##### Program specific commands
+
+#Runs the yuidocs in the current folder and makes it available in the port 5000
+alias yuidocserver='yuidoc . --server 5000'
+
+# Run python tests
+alias testAll='python -m unittest discover testing/'
+
+# run chromium browser with no security mode on
+alias chromium-browser-no-web-security='chromium-browser --disable-web-security &'
+
+alias chrome='open -a Google\ Chrome\ Canary --args --disable-web-security -–allow-file-access-from-files'
+
+
+# got to and serve RTD documentation
+alias cddocs="cd /Users/$USER/Developer/Calendar42/Calendar42-documentation/; workon c42_docs; echo 'TO RUN: mkdocs serve --verbose'"
+
+# Go to django app
+alias cdprivate="cd /Users/$USER/Developer/Calendar42/django_app/; workon c42_django_app"
+
+# Fix virtualenv permissions
+alias fixpermissionsvirtualenv="sudo chmod -R 775 /Users/$USER/virtualenvs; sudo chown -R $USER:staff /Users/$USER/virtualenvs*;"
+
+# Git aware prompt (requires https://github.com/jimeh/git-aware-prompt)
+# export HISTTIMEFORMAT="%d/%m/%y %T "
+# export GITAWAREPROMPT=~/.bash/git-aware-prompt
+# source $GITAWAREPROMPT/main.sh
+# export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Use sublime for commands that prompt input (requires sublime and subl being symlinked)
+# export EDITOR='subl -w'
+
+####### Plannerstack commands
+alias plannerstack_build_client="open http://10.42.2.12:9050/"
+alias plannerstack_build_graylog="open http://10.42.3.16:9000/dashboards/542d71f8e4b07cc749537ec4"
+alias plannerstack_build_server="ssh c42@10.42.2.12"
+alias plannerstack_build="plannerstack_build_wiki && plannerstack_build_graylog && plannerstack_build_client && plannerstack_build_server"
+
 ```
 
 ## Global hg config
