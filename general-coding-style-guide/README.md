@@ -6,7 +6,7 @@ Language overarching style-guide
 
 > Some rules apply to all languages, although more strictly to some.
 
-> This rules should be applied as fas as possible always searching for an improvement of the readability. If any of this rules is an impediment in that sense, shouldn't be applied.
+> This rules should be applied as far as possible always searching for an improvement of the readability. If any of this rules is an impediment in that sense, shouldn't be applied.
 
 ### C42 rules! ###
 
@@ -22,6 +22,7 @@ Language overarching style-guide
 1. Functions should be short and have a clear single purpose; this improves readability, reusability and reduces the need for extensive commentary.
 1. Variables, constants, attributes and the like should not be reused unless they have the same exact logical meaning, otherwise, refactoring (when the differences become apparent) will be complicated and error prone.
 1. Comments should explain the why of the code, not the what; the code itself is the what of the code.
+1. All code, comments and documentation should be totally in English.
 
 ### Code Structure ###
 
