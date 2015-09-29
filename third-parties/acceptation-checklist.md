@@ -7,16 +7,32 @@ Will contain a list of elements to check before any third party app is accepted 
 > The app itself should have a minim acceptation quality.
 
 * Should cover 100% of the business requirements as all wireframes provided to define that business logic related behaviour.
-* No blanc or empty states: Shouldn't exist any change that the app stays in a 'no-state' state. A blanc page, without any feedback is a really bad state.
-* Shold support all browsers/devices that accomplish the 5% rule. So all browser/devices that are being used for more than 5% of the users of that app, should be supported.
+* All 'X' cases should be handled despite they are not defined in the designing stage, following the process of: detection - definition - design - implement - test.
+* The App should be [robust]( https://en.wikipedia.org/wiki/Robustness_(computer_science) and never crash. So all errors can occur commig from external systems should be 100% handled. Some examples of Errors should be properly handled:
+  * Front End App: If any of the Backends with who this app is communication with returns an error, should be properly communicated to the user.
+  * Back End App: If any of the Frontends make a wrong call, the error should be communicated properly.
+  * Back End App: If any of the external services returns an error, it should be properly handled.
+  * Mobile App: If any of the phone services used fails or returns an error, should be properly communicated to the user and the app shouldn't fail.
+* 
+* Some basic stages are not acceptable and will be considered as a critic error. Some of them are:
+  * Blanc stage: No answer to the client/user.
+  * Not understandable error stage.
+  * ...
+* Shold support all platforms/devices that accomplish the 5% rule. So all browser/devices that are being used for more than 5% of the users of that app, should be supported.
 * Bugs free: We consider that any accepted app be bug free.
-* Errors: The app should cover absolutelly all possible error states and never crash.
+* The delivered product should be completely bug free.
+* A test suit should be delivered with the app.
 
 ## Code quality
 
 > In C42 we build, we create and we maintain. So we care about the quality of the code, we will need to modify it, we will have in mind the developer who wrote that code.
 
-* We created a simple [code style guideline](https://github.com/calendar42/developer-guide/tree/master/general-coding-style-guide) where we can find what we understand as a code quality.
+* All new code should follow the [general C42 code guidelines](https://github.com/calendar42/developer-guide/tree/master/general-coding-style-guide).
+* All modifications made in old code should have a proper comment explaining the reason of that change in ONE LINE.
+* We are creating a different guidelines based on language. Take a look to the [C42 developer-guide](https://github.com/calendar42/developer-guide) and have it always in mind.
+* The data used should be consistent and follow a logic structure.
+* Translations should be dynamic.
+* All external libraries used should be in the last version.
 
 ## Transfer process/requirements
 
