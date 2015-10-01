@@ -349,3 +349,168 @@ nosetests.xml
 # Translations
 *.mo
 ```
+
+Ubuntu kickstart %post
+
+%post
+#achter grond C42
+mkdir /home/background
+chown -R nobody /home/background
+wget --directory-prefix=/usr/share/backgrounds http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/252744/Calendar42_icon_u0aiwr.png
+
+yes "yes"|wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+yes "yes"|add-apt-repository -y ppa:tortoisehg-ppa/releases
+yes "yes"|add-apt-repository "deb http://archive.canonical.com/ubuntu/ $(lsb_release -sc) partner"
+
+sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+apt-get update -y
+apt-get upgrade -y
+apt-get dist-upgrade -y
+apt-get check
+ubpt-get autoclean -y
+apt-get autoremove -y
+aptitude install ubuntu-desktop -y
+apt-get install xorg gnome-core gnome-system-tools gnome-app-install -y
+apt-get install ubuntu-session -y
+apt-get install git -y
+yes "yes" |git clone https://accict:MwHjD5x-TBWAjUZ@github.com:/calendar42/developer-guide
+echo "Last change ca6d563011036d1e9365abcff325df0ec22d8094" /
+
+
+
+
+apt-get install ubuntu-session -y
+apt-get install python-pip -y
+apt-get vim -y
+apt-get install node -y
+apt-get install gksu -y
+apt-get install meld  -y
+apt-get install slack -y
+apt-get install Pidgin -y
+apt-get install Terminator -y
+apt-get install Diodon -y
+apt-get install openssl libcurl3 libxml2 libssl-dev libxml2-dev libcurl4-openssl-dev pinentry-curses xclip -y
+apt-get install libxss1 libappindicator1 libindicator7 -y
+apt-get install google-chrome-stable -y
+apt-get install mercurial tortoisehg -y
+apt-get install skype -y
+apt-get install virtualenvwrapper -y
+
+#/usr/share/gnome-background-properties/ubuntu-wallpapers.xml
+
+#toevoeging
+#repository
+yes "yes"|add-apt-repository ppa:kilian/f.lux
+wget -O - https://www.hipchat.com/keys/hipchat-linux.key | apt-key add -
+echo "deb http://downloads.hipchat.com/linux/apt stable main" > \
+  /etc/apt/sources.list.d/atlassian-hipchat.list
+yes "yes"|apt-add-repository ppa:paolorotolo/android-studio
+yes "yes"|add-apt-repository ppa:webapps/preview
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" >>/etc/apt/sources.list.d/pgdg.list
+yes "yes"|apt-add-repository ppa:mercurial-ppa/releases
+yes "yes"|add-apt-repository ppa:chris-lea/node.js
+
+apt-get update
+#flux https://justgetflux.com/linux.html
+apt-get install fluxgui -y
+#lastpass cli lpass
+wget https://launchpad.net/ubuntu/+archive/primary/+files/lastpass-cli_0.5.0-1_amd64.deb
+dpkg -i lastpass-cli_0.5.0-1_amd64.deb
+
+#subline
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
+dpkg -i sublime-text_build-3083_amd64.deb
+
+#Hipchat
+apt-get install hipchat -y
+
+#Top Programming Fonts
+curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
+
+#pycharm
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key
+sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+apt-get update
+#apt-get install pycharm -y hier moeten nog wat yes states bij
+apt-get install pycharm --force-yes -y
+#android-studio
+apt-get install android-studio -y
+
+#IntelliJ
+
+yes "yes"|add-apt-repository ppa:webupd8team/java &&
+apt-get update &&
+yes "yes"|apt-get install oracle-java7-installer &&
+echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections &&
+update-java-alternatives -s java-7-oracle &&
+
+wget -O /tmp/intellij.tar.gz http://download.jetbrains.com/idea/ideaIC-12.0.4.tar.gz &&
+tar xfz /tmp/intellij.tar.gz &&
+cd idea-IC-123.169/bin &&
+./idea.sh
+
+#mysql
+#apt-get install mysql-server -y
+echo "mysql-server-5.5 mysql-server/root_password nopass root" | debconf-set-selections
+echo "mysql-server-5.5 mysql-server/root_password_again nopass root" | debconf-set-selections
+apt-get -y install mysql-server-5.5
+
+#postgresql
+apt-get install postgresql-9.4 pgadmin3 postgresql-contrib -y
+
+#poedit
+apt-get install poedit -y
+
+#meld
+apt-get install meld -y
+
+#Chrome Extension
+#/usr/bin/google-chrome --load-extension=<path to extension directory>
+
+#npm
+apt-get install npm -y
+
+#grunt
+
+apt-get install nodejs -y
+npm install -g grunt-cli
+
+#ruby
+
+apt-get install ruby-full -y
+
+#cordova
+npm install -g cordova
+
+#chromium-browser
+apt-get install chromium-browser -y
+
+#ADT
+#http://techtach.com/2014/05/install-android-sdkadt-bundle-on-ubuntu/ (moet nog in het script verwerkte worden)
+
+
+#apache2
+apt-get install apache2 -y
+
+
+#gitg
+apt-get install gitg -y
+
+
+#background
+echo "$(cat /etc/hostname | sed 's/^...//') ALL=(ALL)       NOPASSWD: ALL " >>/etc/sudoers
+echo "accict ALL=(ALL)       NOPASSWD: ALL " >>/etc/sudoers
+echo "Last change ca6d563011036d1e9365abcff325df0ec22d8094" >> /home/background/git_versie
+dpkg -i /sublime-text_build-3083_amd64.deb
+wget --directory-prefix=/usr/share/backgrounds http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/252744/Calendar42_icon_u0aiwr.png
+echo "gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/Calendar42_icon_u0aiwr.png" >>/etc/profile.d/C42-background.sh
+echo "sudo apt-get install xbacklight -y" >>/etc/profile.d/C42-background.sh
+echo "sudo xbacklight -set 100" >>/etc/profile.d/C42-background.sh
+echo "sudo rm -f /etc/profile.d/C42-background.sh" >>/etc/profile.d/C42-background.sh
+
+
+
+
+
