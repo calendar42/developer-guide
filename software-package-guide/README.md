@@ -352,8 +352,8 @@ nosetests.xml
 
 # Ubuntu kickstart %post
 
-%post
-##achter grond C42
+
+##algemene config
 mkdir /home/background
 chown -R nobody /home/background
 wget --directory-prefix=/usr/share/backgrounds http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/252744/Calendar42_icon_u0aiwr.png
