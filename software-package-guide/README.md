@@ -350,7 +350,7 @@ nosetests.xml
 *.mo
 ```
 
-Ubuntu kickstart %post
+####### Ubuntu kickstart %post
 
 %post
 #achter grond C42
