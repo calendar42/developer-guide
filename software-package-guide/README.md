@@ -350,10 +350,10 @@ nosetests.xml
 *.mo
 ```
 
-####### Ubuntu kickstart %post
+# Ubuntu kickstart %post
 
 %post
-#achter grond C42
+##achter grond C42
 mkdir /home/background
 chown -R nobody /home/background
 wget --directory-prefix=/usr/share/backgrounds http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_540,q_80,w_720/v1/252744/Calendar42_icon_u0aiwr.png
@@ -397,10 +397,10 @@ apt-get install mercurial tortoisehg -y
 apt-get install skype -y
 apt-get install virtualenvwrapper -y
 
-#/usr/share/gnome-background-properties/ubuntu-wallpapers.xml
+##/usr/share/gnome-background-properties/ubuntu-wallpapers.xml
 
-#toevoeging
-#repository
+##toevoeging
+##repository
 yes "yes"|add-apt-repository ppa:kilian/f.lux
 wget -O - https://www.hipchat.com/keys/hipchat-linux.key | apt-key add -
 echo "deb http://downloads.hipchat.com/linux/apt stable main" > \
@@ -413,32 +413,32 @@ yes "yes"|apt-add-repository ppa:mercurial-ppa/releases
 yes "yes"|add-apt-repository ppa:chris-lea/node.js
 
 apt-get update
-#flux https://justgetflux.com/linux.html
+##flux https://justgetflux.com/linux.html
 apt-get install fluxgui -y
-#lastpass cli lpass
+##lastpass cli lpass
 wget https://launchpad.net/ubuntu/+archive/primary/+files/lastpass-cli_0.5.0-1_amd64.deb
 dpkg -i lastpass-cli_0.5.0-1_amd64.deb
 
-#subline
+##subline
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 dpkg -i sublime-text_build-3083_amd64.deb
 
-#Hipchat
+##Hipchat
 apt-get install hipchat -y
 
-#Top Programming Fonts
+##Top Programming Fonts
 curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 
-#pycharm
+##pycharm
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key
 sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
 apt-get update
-#apt-get install pycharm -y hier moeten nog wat yes states bij
+##apt-get install pycharm -y hier moeten nog wat yes states bij
 apt-get install pycharm --force-yes -y
-#android-studio
+##android-studio
 apt-get install android-studio -y
 
-#IntelliJ
+##IntelliJ
 
 yes "yes"|add-apt-repository ppa:webupd8team/java &&
 apt-get update &&
@@ -451,55 +451,55 @@ tar xfz /tmp/intellij.tar.gz &&
 cd idea-IC-123.169/bin &&
 ./idea.sh
 
-#mysql
-#apt-get install mysql-server -y
+##mysql
+##apt-get install mysql-server -y
 echo "mysql-server-5.5 mysql-server/root_password nopass root" | debconf-set-selections
 echo "mysql-server-5.5 mysql-server/root_password_again nopass root" | debconf-set-selections
 apt-get -y install mysql-server-5.5
 
-#postgresql
+##postgresql
 apt-get install postgresql-9.4 pgadmin3 postgresql-contrib -y
 
-#poedit
+##poedit
 apt-get install poedit -y
 
-#meld
+##meld
 apt-get install meld -y
 
-#Chrome Extension
-#/usr/bin/google-chrome --load-extension=<path to extension directory>
+##Chrome Extension
+##/usr/bin/google-chrome --load-extension=<path to extension directory>
 
-#npm
+##npm
 apt-get install npm -y
 
-#grunt
+##grunt
 
 apt-get install nodejs -y
 npm install -g grunt-cli
 
-#ruby
+##ruby
 
 apt-get install ruby-full -y
 
-#cordova
+##cordova
 npm install -g cordova
 
-#chromium-browser
+##chromium-browser
 apt-get install chromium-browser -y
 
-#ADT
-#http://techtach.com/2014/05/install-android-sdkadt-bundle-on-ubuntu/ (moet nog in het script verwerkte worden)
+##ADT
+##http://techtach.com/2014/05/install-android-sdkadt-bundle-on-ubuntu/ (moet nog in het script verwerkte worden)
 
 
-#apache2
+##apache2
 apt-get install apache2 -y
 
 
-#gitg
+##gitg
 apt-get install gitg -y
 
 
-#background
+##background
 echo "$(cat /etc/hostname | sed 's/^...//') ALL=(ALL)       NOPASSWD: ALL " >>/etc/sudoers
 echo "accict ALL=(ALL)       NOPASSWD: ALL " >>/etc/sudoers
 echo "Last change ca6d563011036d1e9365abcff325df0ec22d8094" >> /home/background/git_versie
@@ -510,7 +510,6 @@ echo "sudo apt-get install xbacklight -y" >>/etc/profile.d/C42-background.sh
 echo "sudo xbacklight -set 100" >>/etc/profile.d/C42-background.sh
 echo "sudo rm -f /etc/profile.d/C42-background.sh" >>/etc/profile.d/C42-background.sh
 
-
-
+reboot
 
 
