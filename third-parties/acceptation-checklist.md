@@ -1,19 +1,37 @@
-# Acceptation Checklist
+# Acceptation Checklist (WIP)
 
 Will contain a list of elements to check before any third party app is accepted as a delivered.
 
 ## App quality
 
+### Business requirements
+
+> In C42 we build code to construct a new and better reality. There is no code without a goal.
+
+* The main goal of the app should be accomplished and any error or bug found needs to be fixed. This can be modified based on contract or in collaboration process.
+* We consider the following errors/bugs classification:
+ *  Show stoppers: Those errors that doesn't allow to the user to accomplish on of the main goals of the app.
+ * Critical: A sub-goal of the app can't be reached because this error.
+ * Major: Error that annoyes most part of the users of the app.
+ * Minor: Other minor bugs like copy errors and small style errors. For example.
+
+### UX quality
+
+> All apps with a front end side should accomplish the C42 quality that we are always trying to bring to our users.
+
+* Should cover 100% of the requirements as all wireframes provided.
+* Performance. The user experience shouldn't be affected for the slow response of the app.
+
 > The app itself should have a minim acceptation quality.
 
-* Should cover 100% of the business requirements as all wireframes provided to define that business logic related behaviour.
+### Basic App quality
+
 * All 'X' cases should be handled despite they are not defined in the designing stage, following the process of: detection - definition - design - implement - test.
 * The App should be [robust]( https://en.wikipedia.org/wiki/Robustness_(computer_science) and never crash. So all errors can occur commig from external systems should be 100% handled. Some examples of Errors should be properly handled:
   * Front End App: If any of the Backends with who this app is communication with returns an error, should be properly communicated to the user.
   * Back End App: If any of the Frontends make a wrong call, the error should be communicated properly.
   * Back End App: If any of the external services returns an error, it should be properly handled.
   * Mobile App: If any of the phone services used fails or returns an error, should be properly communicated to the user and the app shouldn't fail.
-* 
 * Some basic stages are not acceptable and will be considered as a critic error. Some of them are:
   * Blanc stage: No answer to the client/user.
   * Not understandable error stage.
@@ -28,8 +46,8 @@ Will contain a list of elements to check before any third party app is accepted 
 > In C42 we build, we create and we maintain. So we care about the quality of the code, we will need to modify it, we will have in mind the developer who wrote that code.
 
 * All new code should follow the [general C42 code guidelines](https://github.com/calendar42/developer-guide/tree/master/general-coding-style-guide).
-* All modifications made in old code should have a proper comment explaining the reason of that change in ONE LINE.
 * We are creating a different guidelines based on language. Take a look to the [C42 developer-guide](https://github.com/calendar42/developer-guide) and have it always in mind.
+* All modifications made in old code should have a proper comment explaining the reason of that change in ONE LINE.
 * The data used should be consistent and follow a logic structure.
 * Translations should be dynamic.
 * All external libraries used should be in the last version.
