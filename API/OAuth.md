@@ -81,7 +81,7 @@ By sending along an email_address param the oAuth flow can result in a flow that
 A registered oAuth App related to a Service requests the following:
 
 ```
-/authorize?email_address=someone@somesite.com&app=&token=&scope=...
+https://calendar42.com/oauth2/authorize?email_address=someone@somesite.com&app=&token=&scope=...
 ```
 
 Different actions would be performed based on the current status of the email_address used to request authorization:
