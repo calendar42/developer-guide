@@ -133,4 +133,8 @@ In this case the user experience could be a 'longer' response time from the logi
 Different options are available like showing a loader with a message explaining which actions are happening in the background.
 In a Smartphone Native app a Webview can be opened in the background and make this process totally invisible for the user.
 
-### Common errors for the authorization request
+### Error responses (WIP)
+
+#### Authentication errors
+
+All calls received with a wrong Token or clientID will be answered with a `403` code status.
