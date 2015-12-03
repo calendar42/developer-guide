@@ -6,6 +6,24 @@ To begin, obtain OAuth 2.0 client credentials from the Calendar42 Developers Con
 
 This page gives an overview of the OAuth 2.0 authorization scenarios that Calendar42 supports, and provides links to more detailed content. For details about using OAuth 2.0 for authentication, see OpenID Connect.
 
+### WIP!
+
+"WIP" stands for "*Work in progress*".
+Because at Calendar42 we are working to improve and increase all functionalities we provide in our systems it is important to keep an eye on our [Changenotes](http://docs.calendar42.com/en/latest/rest-api/change-notes/) and have in mind the following list of endpoints can be accessed through oAuth authorization.
+
+#### 3 December 2015
+
+Only the following endpoints and operations can be performed with the token provided through oAuth.
+
+* calendars
+  * GET
+  * POST
+* events
+  * GET
+  * POST
+
+> If you notice this documentation is not up to date, please let us know and we will help as soon as possible.
+
 ### Basic steps
 
 All applications follow a basic pattern when accessing a Calenda42 API using OAuth 2.0. At a high level, you follow four steps:
@@ -36,9 +54,16 @@ For the web flow, requested scopes will be displayed to the user on the authoriz
 | Name        | Description|
 | ------------- |:---------:|
 | Service.read      | Read all calendars and events related to the user and the service. |
-| Service.write      | Modify all calendars and events related to the user and the service. |
+| Service.write      | *Read* and modify all calendars and events related to the user and the service. |
 | ...      | ... |
 
+#### Which scope(s) should I use?
+
+| Need        | Scope(s) |
+| ------------- |:---------:|
+| Access to the service related calendars and events, but not modify it. | Service.read |
+| Access to the service related calendars and events and modify it. This scope provides of *read* and write access     | Service.write|
+| ... | ... |
 
 ### Scenarios
 
@@ -109,5 +134,3 @@ Different options are available like showing a loader with a message explaining 
 In a Smartphone Native app a Webview can be opened in the background and make this process totally invisible for the user.
 
 ### Common errors for the authorization request
-
-(WIP)
