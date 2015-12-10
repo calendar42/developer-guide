@@ -32,14 +32,31 @@ All applications follow a basic pattern when accessing a Calenda42 API using OAu
 
   Contact Calendar42 to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Calenda42 and your application. The set of values varies based on what type of application you are building. For example, a JavaScript application does not require a secret, but a web server application does.
 
-2. Obtain an access token from the Calenda42 Authorization Server:
+1. Obtain an access token from the Calenda42 Authorization Server:
 
-3. Send the access token to an API:
+  To get the access token is required to make a request to C42 servers with your  `service_id`, `grant_type` and `redirect_uri`.
+
+  With that the user will be redirected to the `redirect_uri` with a code as a parameter in the url. That code is the one should be used to get the access token.
+
+  Internet is a very good place to find different examples about how to consume an API using the oAuth authentication system.
+
+  We provide of an example made with nodeJS: [c42-node-oauth](https://github.com/calendar42/c42-node-oauth)
+
+  Some other examples that we didn't check can be found in the net:
+
+  * [Java](https://github.com/google/google-oauth-java-client)
+  * [python-oauth2](https://github.com/joestump/python-oauth2)
+  * [PHP](https://github.com/thephpleague/oauth2-client)
+  * [Ruby](https://github.com/intridea/oauth2)
+  * [NodeJS](https://github.com/ciaranj/node-oauth) - used in the c42 example -
+  * etc ...
+
+1. Send the access token to an API:
 
   After an application obtains an access token, it sends the token to a Calenda42 API in an HTTP authorization header. It is possible to send tokens as URI query-string parameters, but we don't recommend it, because URI parameters can end up in log files that are not completely secure. Also, it is good REST practice to avoid creating unnecessary URI parameter names.
   Access tokens are valid only for the set of operations and resources described in the scope of the token request. For example, if an access token is issued for the Calenda42+ API, it does not grant access to the Calenda42 Contacts API. You can, however, send that access token to the Calenda42+ API multiple times for similar operations.
 
-4. Refresh the access token, if necessary.
+1. Refresh the access token, if necessary.
 
   Access tokens have limited lifetimes. If your application needs access to a Calenda42 API beyond the lifetime of a single access token, it can obtain a refresh token. A refresh token allows your application to obtain new access tokens.
 
