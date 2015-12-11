@@ -22,8 +22,6 @@ Only the following endpoints and operations can be performed with the token prov
   * GET
   * POST
 
-> If you notice this documentation is not up to date, please let us know and we will help as soon as possible.
-
 ### Basic steps
 
 All applications follow a basic pattern when accessing a Calenda42 API using OAuth 2.0. At a high level, you follow four steps:
@@ -61,6 +59,19 @@ All applications follow a basic pattern when accessing a Calenda42 API using OAu
   Access tokens have limited lifetimes. If your application needs access to a Calenda42 API beyond the lifetime of a single access token, it can obtain a refresh token. A refresh token allows your application to obtain new access tokens.
 
 > Note: Save refresh tokens in secure long-term storage and continue to use them as long as they remain valid. Limits apply to the number of refresh tokens that are issued per client-user combination, and per user across all clients, and these limits are different. If your application requests enough refresh tokens to go over one of the limits, older refresh tokens stop working.
+
+### Silent flow
+
+The Calendar42 oAuth system allows you to obtain the access token using a `slient flow`.
+It means that the user don't need to accept the service and the service can't use the information of the user but all is created by that service.
+
+What is happening in the background is that we are creating a 'sandbox user' for that service with a restricted access to information.
+
+Later the user can unify users allowing the service to access to it's old and future information. To do that, will be required the acceptance of the service from the user perspective.
+
+To trigger this process, is required to send the `email_address` when the access token is requested for the very first time. The token received will be a service restricted token.
+
+To switch to the  'normal access token' will be required to trigger the normal oAuth flow, where the user need to accept the service.
 
 ### Scopes (WIP)
 
