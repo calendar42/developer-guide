@@ -9,6 +9,7 @@ At C42 we work with prepared installations for our team that contain different p
 * **Developer package**: Installed for team members touching and testing code
 * **UX package**: Installed team members people design User experiences
 * **Bizdev package**: Installed for team members that are developing business
+* **QA package**: Installed for team members who will be invested in making sure that thngs dont break.
 
 ## Todo's in this document
 
@@ -21,7 +22,7 @@ At C42 we work with prepared installations for our team that contain different p
 #### Mac & Ubuntu
 
 | Name 						|  Short Description 		| Version
-| --------					| --------					|------------------
+| --------					| --------			|------------------
 | Chrome | Browser | [latest](https://www.google.nl/chrome/browser/desktop/)
 | Flux| Automatic screen dimmer | [latest](https://justgetflux.com/)
 | LastPass Chrome extension | Password manager | [latest](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
@@ -32,6 +33,8 @@ At C42 we work with prepared installations for our team that contain different p
 | Slack | Chat app | [latest](https://slack.com)
 
 _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. In the end the computer is just a digital type writer, everybody needs a good text editor. Others are also allowed of course ;)_
+
+Note to ACC: PLEASE disregrad this section for [QA package](##QA package)
 
 #### Mac only
 
@@ -130,6 +133,29 @@ _^ Yes, anyone at C42 should at least have the unpaid version of Sublime Text. I
 | Name 						|  Short Description 		
 | --------					| --------					
 | Microsoft Office 			| The tools for the office
+
+## QA package
+
+anything marked `tm` means that it is to be done by the Team Member. ACC need not do these. 
+Note to ACC: PLEASE disregrad the [General Package](##General Package) rules for this section
+
+#### Ubuntu only
+
+| Name 		|  Short Description 			| How to install	
+| --------	| --------				| --------
+| google chrome | web browser 				| install from google deb file and use ubuntu software center to run installation
+| firefox 	| backup web browser 			| should come preinstalled with ubuntu release
+| thunderbird 	| email client 				| should come preinstalled with ubuntu release
+|lightning 	| calendar app:add-on from thunderbird 	| is in list of add ons for thunderbird. use the latest version only
+| slack `tm` 	| Messaging app 			| shortcut from chrome(as a webapp) 
+| postman `tm` 	| REST testing app 			| shortcut from chrome(as a webapp) 
+| psensors 	| monitor the system temperatures	| sudo apt-get install psensors -y
+| htop 		| monitor system performance		| sudo apt-get install htop -y
+| bmon   	| monitor the network activity		| sudo apt-get install bmon -y
+| vim 		| text editor for the terminal 		| sudo apt-get install vim -y
+| Sublime Text 	| Text editor 				| [version does not matter, >= 2 is good](https://www.sublimetext.com/)
+| Shutter 	| Photo/Screenshot editor 		| There should only one app available in the Ubuntu Software Center
+| Kazam 	| Video/Screencast editor 		| There should only one app available in the Ubuntu Software Center
 
 
 ## Other things that might be automated
@@ -419,7 +445,7 @@ apt-get install fluxgui -y
 wget https://launchpad.net/ubuntu/+archive/primary/+files/lastpass-cli_0.5.0-1_amd64.deb
 dpkg -i lastpass-cli_0.5.0-1_amd64.deb
 
-##subline
+##sublime
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 dpkg -i sublime-text_build-3083_amd64.deb
 
