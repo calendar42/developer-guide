@@ -149,7 +149,7 @@ Note to ACC: PLEASE disregrad the [General Package](##General Package) rules for
 |lightning 	| calendar app:add-on from thunderbird 	| is in list of add ons for thunderbird. use the latest version only
 | slack `tm` 	| Messaging app 			| shortcut from chrome(as a webapp) 
 | postman `tm` 	| REST testing app 			| shortcut from chrome(as a webapp) 
-| psensors 	| monitor the system temperatures	| sudo apt-get install psensors -y
+| gi	 	| version control			| sudo apt-get install git -y
 | htop 		| monitor system performance		| sudo apt-get install htop -y
 | bmon   	| monitor the network activity		| sudo apt-get install bmon -y
 | vim 		| text editor for the terminal 		| sudo apt-get install vim -y
