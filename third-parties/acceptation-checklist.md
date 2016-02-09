@@ -2,6 +2,8 @@
 
 Will contain a list of elements to check before any third party app is accepted as a delivered.
 
+> The key words **"MUST"**, **"MUST NOT"**, **"REQUIRED"**, **"SHALL"**, **"SHALL NOT"**, **"SHOULD"**, **"SHOULD NOT"**, **"RECOMMENDED"**, **"MAY"**, and **"OPTIONAL"** in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
 ## App quality
 
 ### Business requirements
@@ -20,7 +22,7 @@ Will contain a list of elements to check before any third party app is accepted 
 > All apps with a front end side must accomplish the C42 quality that we are always trying to bring to our users.
 
 * Must cover 100% of the requirements as all wireframes provided.
-* Performance. The user experience shouldn't be affected for the slow response of the app.
+* Performance. The user experience should not be affected for the slow response of the app.
 
 ### Basic App quality
 
@@ -35,7 +37,7 @@ Will contain a list of elements to check before any third party app is accepted 
       * If any of the front end apps makes a wrong call, the error must be communicated properly.
       * If any of the external services returns an error, it must be properly handled.
   * Mobile App
-      * If any of the phone services used fails or returns an error, must be properly communicated to the user and the app shouldn't fail.
+      * If any of the device services fails or returns an error, must be properly communicated to the user and the app shouldn't crash.
 * Some basic stages are not acceptable and will be considered as a critic error. Some of them are:
   * Blanc stage: No answer to the client/user.
   * Not understandable or user friendly error stage.
