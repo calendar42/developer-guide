@@ -8,37 +8,41 @@ Will contain a list of elements to check before any third party app is accepted 
 
 > In C42 we build code to construct a new and better reality. There is no code without a goal.
 
-* The main goal of the app should be accomplished and any error or bug found needs to be fixed. This can be modified based on contract or in collaboration process.
+* The main goal of the app must be accomplished and any error or bug found needs to be fixed. This can be modified based on contract or in collaboration process.
 * We consider the following errors/bugs classification:
- *  Show stoppers: Those errors that doesn't allow to the user to accomplish on of the main goals of the app.
- * Critical: A sub-goal of the app can't be reached because this error.
- * Major: Error that annoyes most part of the users of the app.
- * Minor: Other minor bugs like copy errors and small style errors. For example.
+   *  Show stoppers: Those errors that doesn't allow to the user to accomplish on of the main goals of the app.
+   * Critical: A sub-goal of the app can't be reached because this error.
+   * Major: Error that annoy most part of the users of the app.
+   * Minor: Other minor bugs like copy errors and small style errors. For example.
 
 ### UX quality
 
-> All apps with a front end side should accomplish the C42 quality that we are always trying to bring to our users.
+> All apps with a front end side must accomplish the C42 quality that we are always trying to bring to our users.
 
-* Should cover 100% of the requirements as all wireframes provided.
+* Must cover 100% of the requirements as all wireframes provided.
 * Performance. The user experience shouldn't be affected for the slow response of the app.
-
-> The app itself should have a minim acceptation quality.
 
 ### Basic App quality
 
-* All 'X' cases should be handled despite they are not defined in the designing stage, following the process of: detection - definition - design - implement - test.
-* The App should be [robust]( https://en.wikipedia.org/wiki/Robustness_(computer_science) and never crash. So all errors can occur commig from external systems should be 100% handled. Some examples of Errors should be properly handled:
-  * Front End App: If any of the Backends with who this app is communication with returns an error, should be properly communicated to the user.
-  * Back End App: If any of the Frontends make a wrong call, the error should be communicated properly.
-  * Back End App: If any of the external services returns an error, it should be properly handled.
-  * Mobile App: If any of the phone services used fails or returns an error, should be properly communicated to the user and the app shouldn't fail.
+> The app itself must have a minimum acceptation quality.
+
+* All edge cases must be handled even if they are not defined in the designing stage, following the process of: detection - definition - design - implement - test.
+* The App must be [robust]( https://en.wikipedia.org/wiki/Robustness_(computer_science) and never crash. So all errors that can occur coming from external systems must be 100% handled. Some examples of Errors must be properly handled:
+  * Front End App
+      * If any of the Backends used returns an error, must be properly communicated to the user.
+      * If any of the Backends used changes the return of a call, the front end app must not crash and communicate a proper error message to the user.
+  * Back End App
+      * If any of the front end apps makes a wrong call, the error must be communicated properly.
+      * If any of the external services returns an error, it must be properly handled.
+  * Mobile App
+      * If any of the phone services used fails or returns an error, must be properly communicated to the user and the app shouldn't fail.
 * Some basic stages are not acceptable and will be considered as a critic error. Some of them are:
   * Blanc stage: No answer to the client/user.
-  * Not understandable error stage.
+  * Not understandable or user friendly error stage.
   * ...
-* Shold support all platforms/devices that accomplish the 5% rule. So all browser/devices that are being used for more than 5% of the users of that app, should be supported.
+* Must support all platforms/devices that accomplish the 5% rule. So all browser/devices that are being used for more than 5% of the users of that app, must be supported.
 * Bugs free: We consider that any accepted app be bug free.
-* The delivered product should be completely bug free.
+* The delivered product must be completely bug free.
 * A test suit should be delivered with the app.
 
 ## Code quality
@@ -54,14 +58,14 @@ Will contain a list of elements to check before any third party app is accepted 
 
 ## Transfer process/requirements
 
-> Tranfering information is not a simple step. It is a really imporant step where we should be sure nothing is being missing, and we will be able install, remove, modify, etc. the code we are buying
+> Transferring information is not a simple step. It is a really important step where we must be sure nothing is missing, and we will be able install, remove, modify, etc. the code we are buying.
 
 All projects should contain a README.md file in the root of the folder tree.
-Template example:
+Structure example:
 
-* Prerequisites: All required tools/modules that this software requires to run at any enviroment with links to its page.
+* Prerequisites: All required tools/modules that this software requires to run at any environment with links to its page.
 * Installation:
-	* Troubleshooting: If there is some, a list of possible troubleshootings.
+	* Troubleshooting: If there is some, a list of possible trouble-shootings.
 * Running
 * Usage
 	* API Reference
