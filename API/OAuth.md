@@ -24,13 +24,13 @@ Only the following endpoints and operations can be performed with the token prov
 
 ### Basic steps
 
-All applications follow a basic pattern when accessing a Calenda42 API using OAuth 2.0. At a high level, you follow four steps:
+All applications follow a basic pattern when accessing a Calendar42 API using OAuth 2.0. At a high level, you follow four steps:
 
-1. Obtain OAuth 2.0 credentials from the Calenda42.
+1. Obtain OAuth 2.0 credentials from the Calendar42.
 
-  Contact Calendar42 to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Calenda42 and your application. The set of values varies based on what type of application you are building. For example, a JavaScript application does not require a secret, but a web server application does.
+  Contact Calendar42 to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Calendar42 and your application. The set of values varies based on what type of application you are building. For example, a JavaScript application does not require a secret, but a web server application does.
 
-1. Obtain an access token from the Calenda42 Authorization Server:
+1. Obtain an access token from the Calendar42 Authorization Server:
 
   To get the access token is required to make a request to C42 servers with your  `service_id`, `grant_type` and `redirect_uri`.
 
@@ -51,12 +51,12 @@ All applications follow a basic pattern when accessing a Calenda42 API using OAu
 
 1. Send the access token to an API:
 
-  After an application obtains an access token, it sends the token to a Calenda42 API in an HTTP authorization header. It is possible to send tokens as URI query-string parameters, but we don't recommend it, because URI parameters can end up in log files that are not completely secure. Also, it is good REST practice to avoid creating unnecessary URI parameter names.
-  Access tokens are valid only for the set of operations and resources described in the scope of the token request. For example, if an access token is issued for the Calenda42+ API, it does not grant access to the Calenda42 Contacts API. You can, however, send that access token to the Calenda42+ API multiple times for similar operations.
+  After an application obtains an access token, it sends the token to a Calendar42 API in an HTTP authorization header. It is possible to send tokens as URI query-string parameters, but we don't recommend it, because URI parameters can end up in log files that are not completely secure. Also, it is good REST practice to avoid creating unnecessary URI parameter names.
+  Access tokens are valid only for the set of operations and resources described in the scope of the token request. For example, if an access token is issued for the Calendar42 API, it does not grant access to the Calendar42 Contacts API. You can, however, send that access token to the Calendar42+ API multiple times for similar operations.
 
 1. Refresh the access token, if necessary.
 
-  Access tokens have limited lifetimes. If your application needs access to a Calenda42 API beyond the lifetime of a single access token, it can obtain a refresh token. A refresh token allows your application to obtain new access tokens.
+  Access tokens have limited lifetimes. If your application needs access to a Calendar42 API beyond the lifetime of a single access token, it can obtain a refresh token. A refresh token allows your application to obtain new access tokens.
 
 > Note: Save refresh tokens in secure long-term storage and continue to use them as long as they remain valid. Limits apply to the number of refresh tokens that are issued per client-user combination, and per user across all clients, and these limits are different. If your application requests enough refresh tokens to go over one of the limits, older refresh tokens stop working.
 
@@ -159,7 +159,7 @@ In the case that no user action is required, a solution would be:
 
 In this case the user experience could be a 'longer' response time from the login page.
 Different options are available like showing a loader with a message explaining which actions are happening in the background.
-In a Smartphone Native app a Webview can be opened in the background and make this process totally invisible for the user.
+In a Smartphone Native app a Web-view can be opened in the background and make this process totally invisible for the user.
 
 ### Error responses (WIP)
 
