@@ -1,13 +1,13 @@
 # Working with third parties (WIP)
 
-> C42 is starting to work a lot with third parties developers. This document is trying to define a guidelines for that relations.
+> This document defines a guidelines of how C42 would like to work together with third parties.
 
 ## Prerequisites
 
 > A list of prerequisites that will prepare our teams to work together in a proper way.
 
 * The delivery product should be completely defined before to start coding.
-* The technical requirements should be in deep defined and accepted for both sides (third partie and C42) before start the implementation. This includes:
+* The technical requirements should be in deep defined and accepted for both sides (third party and C42) before start the implementation. This includes:
   * Technologies used.
   * Communication protocols and channels.
   * Code guidelines.

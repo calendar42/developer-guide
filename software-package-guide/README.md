@@ -513,8 +513,7 @@ npm install -g cordova
 ##chromium-browser
 apt-get install chromium-browser -y
 
-##ADT
-##http://techtach.com/2014/05/install-android-sdkadt-bundle-on-ubuntu/ (moet nog in het script verwerkte worden)
+
 
 
 ##apache2
