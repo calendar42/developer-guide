@@ -1,0 +1,10 @@
+This is a collection of different things that we need to note down in a consistent way.
+
+* Leading slashes
+* parameter formatting (underscores)
+* path formatting (dashes)
+* Error Messages
+* Status codes
+* Payload formate
+  * Store layer/ entities => Wrapped in data & meta_data
+  * Source Layer/ functions: direct payload
